@@ -15,13 +15,13 @@
   <button onclick="goBack()">Return to Main Menu</button>
 
   <script>
-    // 展示结果
+
     const result = localStorage.getItem("gather_result");
     if (result) {
       document.getElementById("lastResult").innerText = result;
     }
 
-    // 返回主菜单
+    
     function goBack() {
       localStorage.setItem("gather_result", "You found some wood, stone, and herbs!");
       window.location.href = "index.html";
