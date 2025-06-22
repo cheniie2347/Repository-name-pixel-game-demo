@@ -8,30 +8,34 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 
-<body style="background: url('093B7254-9610-459C-8BDC-6F538AC57A76.png') no-repeat center center fixed; background-size: cover;">
-    <h2>⛏️ Gathering Resources...</h2>
-    <p>You found some wood, stone, and herbs!</p>
-    <button onclick="goBack()">Return to Main Menu</button>
+<<body style="background: url('093B7254-9610-459C-8BDC-6F538AC57A76.jpeg'); background-size: cover; color: white;">
+  <h2>⛏ Gathering Resources...</h2>
+  <p id="lastResult">You found some wood, stone, and herbs!</p>
 
-    <script><!-- index.html 的 body 内增加 -->
-<p id="lastResult"></p>
+  <button onclick="goBack()">Return to Main Menu</button>
 
-<script>
+  <script>
+    // 展示结果
     const result = localStorage.getItem("gather_result");
     if (result) {
-        document.getElementById("lastResult").innerText = "📦 上次采集结果：" + result;
+      document.getElementById("lastResult").innerText = result;
     }
-</script>
-        function goBack() {
-            localStorage.setItem("gather_result", "木头、石头、草药");
-            window.location.href = "index.html";
-        }
-    </script>
+
+    // 返回主菜单
+    function goBack() {
+      localStorage.setItem("gather_result", "You found some wood, stone, and herbs!");
+      window.location.href = "index.html";
+    }
+  </script>
+
+  <style>
+    button {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  </style>
 </body>
-</html>
-button {
-    position: fixed;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-}
