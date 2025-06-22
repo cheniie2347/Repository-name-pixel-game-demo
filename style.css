@@ -1,5 +1,12 @@
 
-body {
+body {body {
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    background-color: black; /* 防止闪屏 */
+}
   text-align: center;
   font-family: sans-serif;
   background-color: #f0f0f0;
